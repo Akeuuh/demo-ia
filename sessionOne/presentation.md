@@ -5,7 +5,7 @@
     ┌─────────────────────┐            ┌─────────────────────┐
     │   Without Context   │   ────>    │    With Context     │
     │                     │            │                     │
-    │   ChatGPT (web)     │            │   Claude Code       │
+    │   ChatGPT (web)     │            │   Copilot           │
     │   Copy/Paste        │            │   Cursor            │
     │                     │            │   Direct file edit  │
     └─────────────────────┘            └─────────────────────┘
@@ -47,7 +47,7 @@
 │     Understanding the limitations                │
 │     Copy/paste workflow                          │
 │                                                  │
-│  2. AI With Context (Claude Code / Cursor)       │
+│  2. AI With Context (Copilot / Cursor)           │
 │     The power of codebase awareness              │
 │     Direct file modification                     │
 │     Autonomous task execution                    │
@@ -108,26 +108,28 @@ for a React application"
 ```
    You                AI Tool               Your Codebase
     │                   │                         │
+    │──── Prompt ──────>│                         │
+    │                   │                         │
     │                   │<──── Reads files ───────┤
+    │                   │<──── AGENTS.md          |
     │                   │<──── theme.ts ──────────┤
     │                   │<──── i18n/ ─────────────┤
     │                   │<──── components/ ───────┤
     │                   │                         │
-    │──── Prompt ──────>│                         │
+    │                   │──── Writes code ───────>│
+    │                   │  (uses theme,           │
+    │                   │   follows patterns,     │
+    │                   │   includes i18n)        │
     │                   │                         │
-    │<──── Code ────────┤                         │
-    │ (uses theme,      │                         │
-    │  follows patterns,│                         │
-    │  includes i18n)   │                         │
     │                   │                         │
-    │────── Ready to use ─────────────────────────>│
+    │<──── Ready to use ─────────────────────────┤
 ```
 
 ---
 
 ## Demo: Same Prompt, Different Tool
 
-### Using Claude Code / Cursor:
+### Using Copilot / Cursor:
 ```
 "Create a reusable button component
 for a React application"
@@ -153,6 +155,7 @@ for a React application"
 │  • AI knows: General programming patterns               │
 │  • AI doesn't know: Your project specifics              │
 │  • Result: Generic code requiring adaptation            │
+   • Good for: Learning, quick snippets 
 └─────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────┐
@@ -163,6 +166,7 @@ for a React application"
 │  • AI knows: Your internationalization setup            │
 │  • AI knows: Your coding conventions                    │
 │  • Result: Production-ready code matching your style    │
+   • Good for: Daily development, real projects  
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -218,7 +222,7 @@ Result: Consistent refactoring
 └──────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────┐
-│  WITH CONTEXT (Claude Code / Cursor)                 │
+│  WITH CONTEXT (Copilot / Cursor)                     │
 │                                                      │
 │  You: "Create a button component"                   │
 │  Agent: *reads your theme system*                   │
@@ -233,32 +237,6 @@ Result: Consistent refactoring
 ```
 
 **Context + Direct file access = Autonomous agent**
-
----
-
-## The Two Levels
-
-```
-╔═══════════════════════════════════════════════════════╗
-║  LEVEL 1: Without Context (ChatGPT Web)              ║
-╠═══════════════════════════════════════════════════════╣
-║  • Generates generic code                            ║
-║  • No knowledge of your project                      ║
-║  • You copy/paste manually                           ║
-║  • You adapt to your conventions                     ║
-║  • Good for: Learning, quick snippets                ║
-╚═══════════════════════════════════════════════════════╝
-
-╔═══════════════════════════════════════════════════════╗
-║  LEVEL 2: With Context (Claude Code, Cursor, etc.)   ║
-╠═══════════════════════════════════════════════════════╣
-║  • Reads your codebase                               ║
-║  • Understands your patterns                         ║
-║  • Modifies files directly                           ║
-║  • Respects your conventions                         ║
-║  • Good for: Daily development, real projects        ║
-╚═══════════════════════════════════════════════════════╝
-```
 
 ---
 
@@ -287,10 +265,10 @@ into a development partner**
 ┌────────────────────────────────────────────────────┐
 │  Choose ONE context-aware AI tool:                 │
 │                                                    │
-│  • Claude Code    (CLI, free)                     │
+│  • Copilot        (CLI/IDE, subscription)         │
 │  • Cursor         (IDE, freemium)                 │
 │  • Windsurf       (IDE, new)                      │
-│  • Copilot        (if already subscribed)         │
+│  • Claude Code    (CLI, free alternative)         │
 └────────────────────────────────────────────────────┘
 
 ┌────────────────────────────────────────────────────┐
@@ -307,16 +285,16 @@ into a development partner**
 
 ## Getting Started
 
-### Installation Example (Claude Code)
+### Installation Example (Copilot)
 ```bash
-# Install Claude Code
-npm install -g @anthropic-ai/claude-code
+# Install GitHub Copilot CLI
+npm install -g copilot
 
 # Navigate to your project
 cd your-project
 
 # Start using context-aware AI
-claude-code
+copilot
 ```
 
 ### First Commands to Try
