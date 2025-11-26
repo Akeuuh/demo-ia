@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# Session One: From Chatbot to Agent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Date:** [To be filled]
+**Duration:** 30 minutes
+**Format:** Interactive presentation with live demos
 
-Currently, two official plugins are available:
+## 🎯 Session Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This introductory session aims to:
 
-## React Compiler
+1. **Shift mental models** - Move from thinking of AI as "code generator" to "context-aware partner"
+2. **Demonstrate the context advantage** - Show how AI that reads your codebase produces better results
+3. **Inspire adoption** - Get team members to try context-aware tools in their daily work
+4. **Foster discussion** - Create a collaborative learning environment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📋 Agenda
 
-## Expanding the ESLint configuration
+### Part 1: AI Without Context (10 min)
+- Understanding the ChatGPT web experience
+- Live demo: Creating a button component
+- Limitations: Generic code, manual adaptation required
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Part 2: AI With Context (10 min)
+- Introduction to Claude Code, Cursor, Windsurf
+- Live demo: Same prompt, context-aware results
+- Key difference: Theme integration, i18n, pattern matching
+- Direct file modification demonstrated
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Part 3: Discussion & Next Steps (10 min)
+- Team experiences with AI tools
+- Questions and challenges
+- Weekly challenge: Try one context-aware task
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🔧 Demo Application
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This folder contains a React 19 + TypeScript + Vite application used for live demonstrations.
+
+**Tech Stack:**
+- React 19
+- TypeScript
+- Vite
+- styled-components
+- ESLint (Flat config)
+
+**Key Files for Demo:**
+- `src/theme.ts` - Theme system (colors, spacing, fonts)
+- `src/global.ts` - Global styles and typography
+- `src/App.tsx` - Root component
+
+**Files Created During Demo:**
+- `src/components/PrimaryButton.tsx` - Button component (demo output)
+- `AGENTS.md` - Project guidelines for AI tools (created with context-aware AI)
+
+**Running the Demo:**
+```bash
+yarn install
+yarn dev        # Start dev server
+yarn build      # Build for production
+yarn lint       # Check code quality
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎓 Key Takeaways
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**The Core Message:**
+> Context transforms AI from a code generator into a development partner
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Two Levels of AI:**
+1. **Without Context** (ChatGPT) - Generic code, copy/paste workflow
+2. **With Context** (Claude Code, Cursor) - Convention-aware code, direct file modification
+
+**What Makes the Difference:**
+- AI reads your codebase
+- Understands your patterns
+- Uses your theme system
+- Respects your conventions
+- Modifies files directly
+
+## 📊 Debrief
+
+> **Note:** This section will be filled after the session with learnings, feedback, and next steps.
+
+### What Worked Well
+- [To be filled after session]
+
+### Challenges Encountered
+- [To be filled after session]
+
+### Questions Raised
+- [To be filled after session]
+
+### Team Feedback
+- [To be filled after session]
+
+### Action Items
+- [To be filled after session]
+
+### Tools Tried by Team Members
+- [To be filled after session - track adoption]
+
+---
+
+## 📚 Resources Shared
+
+**Tools to Try:**
+- [Claude Code](https://claude.ai/code) - Free CLI tool
+- [Cursor](https://cursor.sh) - AI-first IDE (freemium)
+- [Windsurf](https://codeium.com/windsurf) - New AI IDE
+- [GitHub Copilot Workspace](https://githubnext.com/projects/copilot-workspace)
+
+**Documentation:**
+- [Slides Tool](https://github.com/maaslalani/slides) - Used for presentation
+- [styled-components Docs](https://styled-components.com/)
+
+---
+
+**Next Session:** [To be announced based on team interest and feedback]

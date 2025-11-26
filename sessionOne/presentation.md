@@ -108,19 +108,21 @@ for a React application"
 ```
    You                AI Tool               Your Codebase
     │                   │                         │
+    │──── Prompt ──────>│                         │
+    │                   │                         │
     │                   │<──── Reads files ───────┤
+    │                   │<──── CLAUDE.md/AGENTS.md┤
     │                   │<──── theme.ts ──────────┤
     │                   │<──── i18n/ ─────────────┤
     │                   │<──── components/ ───────┤
     │                   │                         │
-    │──── Prompt ──────>│                         │
+    │                   │──── Writes code ───────>│
+    │                   │  (uses theme,           │
+    │                   │   follows patterns,     │
+    │                   │   includes i18n)        │
     │                   │                         │
-    │<──── Code ────────┤                         │
-    │ (uses theme,      │                         │
-    │  follows patterns,│                         │
-    │  includes i18n)   │                         │
     │                   │                         │
-    │────── Ready to use ─────────────────────────>│
+    │<──── Ready to use ─────────────────────────┤
 ```
 
 ---
@@ -316,7 +318,7 @@ npm install -g @anthropic-ai/claude-code
 cd your-project
 
 # Start using context-aware AI
-claude-code
+claude
 ```
 
 ### First Commands to Try
