@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -6,12 +7,13 @@ const Title = styled.h1`
 `;
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <div>
-    <Title>We need a button</Title>
-</div>
-
-  )
+      <Title>{t('title')}</Title>
+    </div>
+  );
 }
 
-export default App
+export default App;
