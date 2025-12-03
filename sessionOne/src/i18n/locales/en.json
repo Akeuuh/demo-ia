@@ -1,3 +1,16 @@
 {
-  "title": "We need a button"
+  "title": "We need a button",
+  "buttons": {
+    "primary": "Primary Button",
+    "secondary": "Secondary Button",
+    "outline": "Outline Button",
+    "small": "Small Button",
+    "large": "Large Button",
+    "disabled": "Disabled Button",
+    "alerts": {
+      "primary": "Primary clicked!",
+      "secondary": "Secondary clicked!",
+      "outline": "Outline clicked!"
+    }
+  }
 }

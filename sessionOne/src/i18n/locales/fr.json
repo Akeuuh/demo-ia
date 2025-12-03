@@ -1,3 +1,16 @@
 {
-  "title": "Il nous faut un bouton"
+  "title": "Il nous faut un bouton",
+  "buttons": {
+    "primary": "Bouton Principal",
+    "secondary": "Bouton Secondaire",
+    "outline": "Bouton Contour",
+    "small": "Petit Bouton",
+    "large": "Grand Bouton",
+    "disabled": "Bouton Désactivé",
+    "alerts": {
+      "primary": "Principal cliqué !",
+      "secondary": "Secondaire cliqué !",
+      "outline": "Contour cliqué !"
+    }
+  }
 }
