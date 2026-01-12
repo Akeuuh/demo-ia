@@ -458,30 +458,45 @@ Let's explore each one...
 Create a tip component
 ```
 
-**Engineered Prompt:** `.github/prompts/demo.prompt.md`
-```
-/demo
-```
+**Engineered Prompts — Two Approaches:**
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  VAGUE PROMPT MIGHT GIVE YOU:                       │
+│  OPTION A: Self-Contained Sequential Prompts        │
 │                                                     │
-│  • Generic HTML tooltip                            │
-│  • Hardcoded colors                                │
-│  • No variants                                     │
-│  • No TypeScript types                             │
-│  • Doesn't match project style                     │
+│  Step 1: Create the component                      │
+│  @.github/prompts/option-a/demo-create-tip.prompt.md│
+│                                                     │
+│  Step 2: Integrate into App.tsx                    │
+│  @.github/prompts/option-a/demo-integrate-tip.prompt.md│
+│                                                     │
+│  ✓ Best for: demos, tutorials, onboarding         │
 └─────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────┐
-│  ENGINEERED PROMPT GIVES YOU:                       │
+│  OPTION B: Generic + Specific Composition           │
 │                                                     │
-│  • Component matching PromptCard style             │
-│  • Uses theme colors (primary, warning)            │
-│  • Typed props with variants                       │
-│  • Proper file structure                           │
-│  • Translations included                           │
+│  Step 1: Use generic template with spec            │
+│  @.github/prompts/create-component.prompt.md        │
+│  @.github/prompts/option-b/tip-spec.prompt.md       │
+│                                                     │
+│  Step 2: Integrate into App.tsx                    │
+│  @.github/prompts/option-b/demo.prompt.md           │
+│                                                     │
+│  ✓ Best for: teams with established patterns      │
+└─────────────────────────────────────────────────────┘
+```
+
+```
+┌─────────────────────────────────────────────────────┐
+│  VAGUE PROMPT RESULT:       ENGINEERED RESULT:      │
+│                                                     │
+│  • Generic HTML tooltip     • Matches project style │
+│  • Hardcoded colors         • Uses theme system     │
+│  • No variants              • tip/warning variants  │
+│  • No TypeScript            • Fully typed props     │
+│  • No translations          • i18n included         │
+│  • Not in app               • Visible in App.tsx    │
 └─────────────────────────────────────────────────────┘
 ```
 
