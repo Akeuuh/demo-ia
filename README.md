@@ -25,11 +25,15 @@ Each session lives in its own folder:
 
 ```
 demo-ia/
-├── sessionOne/          # Session materials
-│   ├── presentation.md  # Slides for the session
-│   ├── README.md        # Session goals & debrief
-│   └── src/             # Demo code
-├── sessionTwo/          # Future session
+├── sessionOne/              # From Chatbot to Agent
+│   ├── presentation.md      # Slides for the session
+│   ├── README.md            # Session goals & debrief
+│   └── src/                 # Demo code
+├── sessionTwo/              # Prompt Engineering
+│   ├── presentation.md      # Slides for the session
+│   ├── README.md            # Session goals & debrief
+│   ├── .github/prompts/     # Reusable prompt templates
+│   └── src/                 # Demo code
 └── ...
 ```
 
@@ -52,12 +56,24 @@ Introduction to context-aware AI development. We demonstrate the difference betw
 - Understanding context-aware tools (Claude Code, Cursor, Windsurf)
 - Direct file modification and autonomous agents
 
-**Status:** ✅ Completed | 📝 Debrief pending
+**Status:** ✅ Completed
 
 ---
 
-### Session Two: [Coming Soon]
-More sessions will be added as we progress in our learning journey.
+### Session Two: Prompt Engineering
+**[View Presentation](./sessionTwo/presentation.md)** | **[Session Details](./sessionTwo/README.md)**
+
+**Quick Brief:**
+Learn how to write effective prompts that get better results from AI. We cover the 5 Pillars (Task, Context, Examples, Format, Persona), advanced patterns like Chain of Thought and Constraints, and common anti-patterns to avoid. Through live demos, we create reusable prompt templates that can be shared across the team.
+
+**Key Topics:**
+- The 5 Pillars of effective prompts
+- Iterative refinement - prompting is rarely one-shot
+- Prompt anti-patterns (The Novel, The Kitchen Sink, The Flip-Flopper)
+- When NOT to use AI
+- Sharing prompts with `.github/prompts/` and `copilot-instructions.md`
+
+**Status:** 📅 Scheduled | 13/01/2026
 
 ---
 
