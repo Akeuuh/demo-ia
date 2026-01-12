@@ -1,0 +1,65 @@
+{
+  "title": "Prompt Engineering",
+  "subtitle": "L'Art de Communiquer avec l'IA",
+  "intro": "Comparez les prompts vagues avec les prompts bien construits pour voir la difference de qualite.",
+  "examples": {
+    "component": {
+      "title": "Creation d'un Composant",
+      "description": "Voyez comment la specificite ameliore la generation de code"
+    },
+    "bugfix": {
+      "title": "Correction d'un Bug",
+      "description": "Le contexte aide l'IA a comprendre le probleme"
+    },
+    "refactor": {
+      "title": "Refactoring du Code",
+      "description": "Les contraintes assurent des changements previsibles"
+    }
+  },
+  "prompts": {
+    "component": {
+      "vague": {
+        "title": "Demande Generique",
+        "prompt": "Cree un composant de notification",
+        "result": "Composant generique avec des styles codes en dur, pas de variantes, pas d'accessibilite, ne correspond pas a votre design system."
+      },
+      "engineered": {
+        "title": "Demande Detaillee",
+        "prompt": "Cree un composant de notification pour notre app React.\n\nRequis:\n- Variantes: success, error, warning, info\n- Props: message, type, onClose, autoHide\n- Utilise styled-components avec notre theme\n- Inclus ARIA live region pour l'accessibilite\n- Disparition auto apres 5 secondes si autoHide est true",
+        "result": "Composant pret pour la production avec toutes les variantes, accessibilite correcte, integration du theme, et comportement configurable."
+      }
+    },
+    "bugfix": {
+      "vague": {
+        "title": "Probleme Flou",
+        "prompt": "Corrige le bug de login",
+        "result": "L'IA ne sait pas de quel bug vous parlez. Peut faire des changements aleatoires ou demander des clarifications."
+      },
+      "engineered": {
+        "title": "Enonce Clair du Probleme",
+        "prompt": "Bug: Le formulaire de login soumet avec un mot de passe vide.\n\nAttendu: Afficher erreur 'Mot de passe requis'\nActuel: Le formulaire soumet, l'API renvoie 400\n\nEmplacement: src/components/LoginForm.tsx, fonction handleSubmit\n\nCorrige la logique de validation avant la soumission.",
+        "result": "Correction ciblee qui ajoute la validation du mot de passe au bon endroit, avec gestion correcte du message d'erreur."
+      }
+    },
+    "refactor": {
+      "vague": {
+        "title": "Demande Ouverte",
+        "prompt": "Refactorise cette fonction",
+        "result": "L'IA peut reecrire completement la fonction, changer son comportement, ajouter des fonctionnalites non demandees, ou casser des fonctionnalites existantes."
+      },
+      "engineered": {
+        "title": "Demande Contrainte",
+        "prompt": "Refactorise la fonction getUserData.\n\nFAIRE:\n- Extraire l'appel API dans une fonction separee\n- Ajouter les types TypeScript\n- Ameliorer les messages d'erreur\n\nNE PAS FAIRE:\n- Changer la signature de la fonction\n- Ajouter de nouveaux parametres\n- Modifier le type de retour",
+        "result": "Refactoring propre qui ameliore la qualite du code tout en preservant le comportement et l'interface existants."
+      }
+    }
+  },
+  "pillars": {
+    "title": "Les 5 Piliers des Prompts Efficaces",
+    "persona": "Persona",
+    "task": "Tache",
+    "context": "Contexte",
+    "format": "Format",
+    "examples": "Exemples"
+  }
+}

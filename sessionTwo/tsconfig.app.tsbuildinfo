@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/global.ts","./src/main.tsx","./src/styled.d.ts","./src/theme.ts","./src/components/promptcard/promptcard.tsx","./src/components/promptcard/index.ts","./src/components/promptcomparison/promptcomparison.tsx","./src/components/promptcomparison/index.ts","./src/i18n/index.ts"],"version":"5.9.3"}

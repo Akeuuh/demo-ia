@@ -1,0 +1,65 @@
+{
+  "title": "Prompt Engineering",
+  "subtitle": "The Art of Communicating with AI",
+  "intro": "Compare vague prompts with engineered prompts to see the difference in quality.",
+  "examples": {
+    "component": {
+      "title": "Creating a Component",
+      "description": "See how specificity improves code generation"
+    },
+    "bugfix": {
+      "title": "Fixing a Bug",
+      "description": "Context helps AI understand the problem"
+    },
+    "refactor": {
+      "title": "Refactoring Code",
+      "description": "Constraints ensure predictable changes"
+    }
+  },
+  "prompts": {
+    "component": {
+      "vague": {
+        "title": "Generic Request",
+        "prompt": "Create a notification component",
+        "result": "Generic component with hardcoded styles, no variants, no accessibility, doesn't match your design system."
+      },
+      "engineered": {
+        "title": "Detailed Request",
+        "prompt": "Create a notification component for our React app.\n\nRequirements:\n- Variants: success, error, warning, info\n- Props: message, type, onClose, autoHide\n- Use styled-components with our theme\n- Include ARIA live region for accessibility\n- Auto-dismiss after 5 seconds if autoHide is true",
+        "result": "Production-ready component with all variants, proper accessibility, theme integration, and configurable behavior."
+      }
+    },
+    "bugfix": {
+      "vague": {
+        "title": "Unclear Problem",
+        "prompt": "Fix the login bug",
+        "result": "AI doesn't know what bug you're referring to. May make random changes or ask for clarification."
+      },
+      "engineered": {
+        "title": "Clear Problem Statement",
+        "prompt": "Bug: Login form submits with empty password field.\n\nExpected: Show validation error 'Password required'\nActual: Form submits, API returns 400\n\nLocation: src/components/LoginForm.tsx, handleSubmit function\n\nFix the validation logic before form submission.",
+        "result": "Targeted fix that adds password validation in the correct location, with proper error message handling."
+      }
+    },
+    "refactor": {
+      "vague": {
+        "title": "Open-ended Request",
+        "prompt": "Refactor this function",
+        "result": "AI may completely rewrite the function, change its behavior, add features you didn't ask for, or break existing functionality."
+      },
+      "engineered": {
+        "title": "Constrained Request",
+        "prompt": "Refactor getUserData function.\n\nDO:\n- Extract API call to separate function\n- Add TypeScript types\n- Improve error messages\n\nDON'T:\n- Change function signature\n- Add new parameters\n- Modify return type",
+        "result": "Clean refactor that improves code quality while preserving existing behavior and interface."
+      }
+    }
+  },
+  "pillars": {
+    "title": "The 5 Pillars of Effective Prompts",
+    "persona": "Persona",
+    "task": "Task",
+    "context": "Context",
+    "format": "Format",
+    "examples": "Examples"
+  }
+}
