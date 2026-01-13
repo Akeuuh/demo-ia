@@ -133,18 +133,57 @@ Create the Tip component
 
 ### What Worked Well
 
-- TBD after session
+**AI Tools Adoption Since Session 1:**
+
+- Gabriel used Codex for personal projects - appreciated not having to re-specify context each time
+- Mathieu used Copilot for tedious tasks (file parsing, MD documentation generation) - significant time savings, task became "actually enjoyable"
+- Julien used Copilot on the GitHub web interface to automatically remove Amazon token references from CI files - PR generated in 5-10 minutes
+- Julien also used Copilot to fix broken tests with automatic to-do list generation and command execution
+
+**Prompt Engineering Session:**
+
+- The 5 Pillars presentation was well received and addressed participants' expressed needs
+- Live demo of Tip component creation worked with consistent results (3 runs, same output)
+- Claude 4.5 deemed "really performant" for development
+
+**Existing Infrastructure:**
+
+- Slack channel available to request Copilot access on TF1 Workspace
+- Copilot licenses already funded by TF1
 
 ### Challenges Encountered
 
-- TBD after session
+**AI Behavior:**
+
+- AI sometimes does "too much" compared to what was asked - scope too broad (feedback from Mathieu and Gabriel)
+- Prompts not well-defined enough to limit the AI's scope of action
+
+**Quotas and Licenses:**
+
+- Mathieu reached the Copilot chat quota - question about upgrading to Copilot Pro
+- Uncertainty about activating Copilot licenses for external contractors
+- Lack of official communication on what is legally authorized for externals
+
+**Open Technical Questions:**
+
+- How to reference files in generic prompts (.md)? Does the LLM correctly interpret `#file` references?
+- Token consumption when searching files vs inline examples
 
 ### Action Items
 
-- [ ] Create `copilot-instructions.md` for your project
-- [ ] Write 2-3 reusable prompt commands
-- [ ] Share prompts with your team via git
-- [ ] Iterate and refine based on results
+| Action                                                                                      | Owner         | Deadline |
+| ------------------------------------------------------------------------------------------- | ------------- | -------- |
+| Clarify with Damien the Copilot license activation process and authorizations for externals | Axel Leclercq | TBD      |
+| Obtain official communication on legal AI tool usage                                        | Axel Leclercq | TBD      |
+| Update repository with session content                                                      | Axel Leclercq | TBD      |
+| Create `copilot-instructions.md` for your project                                           | Team          | TBD      |
+| Write 2-3 reusable prompts and share via git                                                | Team          | TBD      |
+
+### Questions Raised
+
+- How to effectively manage token consumption?
+- What is the best practice for referencing examples in shared prompts (link vs copy)?
+- Model comparison: Gemini vs Claude vs GPT for development?
 
 ---
 
@@ -161,5 +200,3 @@ Create the Tip component
 - [Session One: From Chatbot to Agent](../sessionOne/README.md)
 
 ---
-
-**Next Session:** TBD based on team feedback
