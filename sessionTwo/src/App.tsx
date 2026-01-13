@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { PromptComparison, PromptExample } from './components/PromptComparison';
+import { Tip } from './components/Tip';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -96,6 +97,13 @@ const PillarName = styled.span`
   color: ${({ theme }) => theme.colors.text};
 `;
 
+const TipsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: ${({ theme }) => theme.spacing.medium};
+  margin-bottom: ${({ theme }) => theme.spacing.xlarge};
+`;
+
 function App() {
   const { t } = useTranslation();
 
@@ -177,6 +185,15 @@ function App() {
           </Pillar>
         </PillarsGrid>
       </PillarsSection>
+
+      <TipsGrid>
+        <Tip variant="tip" title={t('tips.iterate.title')}>
+          {t('tips.iterate.content')}
+        </Tip>
+        <Tip variant="warning" title={t('tips.responsibility.title')}>
+          {t('tips.responsibility.content')}
+        </Tip>
+      </TipsGrid>
 
       <PromptComparison
         title={t('examples.component.title')}

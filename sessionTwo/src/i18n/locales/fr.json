@@ -61,5 +61,15 @@
     "context": "Contexte",
     "format": "Format",
     "examples": "Exemples"
+  },
+  "tips": {
+    "iterate": {
+      "title": "Astuce",
+      "content": "Commencez simple et iterez. Votre premier prompt n'a pas besoin d'etre parfait."
+    },
+    "responsibility": {
+      "title": "Attention",
+      "content": "Vous etes responsable de ce que vous commitez. Relisez toujours le code genere par l'IA."
+    }
   }
 }

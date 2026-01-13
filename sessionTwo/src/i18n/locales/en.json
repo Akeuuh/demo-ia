@@ -61,5 +61,15 @@
     "context": "Context",
     "format": "Format",
     "examples": "Examples"
+  },
+  "tips": {
+    "iterate": {
+      "title": "Pro Tip",
+      "content": "Start simple and iterate. Your first prompt doesn't need to be perfect."
+    },
+    "responsibility": {
+      "title": "Warning",
+      "content": "You're responsible for what you commit. Always review AI-generated code."
+    }
   }
 }
