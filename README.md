@@ -34,6 +34,9 @@ demo-ia/
 │   ├── README.md            # Session goals & debrief
 │   ├── .github/prompts/     # Reusable prompt templates
 │   └── src/                 # Demo code
+├── sessionThree/            # Beyond Context - OpenCode
+│   ├── presentation.md      # Slides for the session
+│   └── README.md            # Session goals & debrief
 └── ...
 ```
 
@@ -73,7 +76,24 @@ Learn how to write effective prompts that get better results from AI. We cover t
 - When NOT to use AI
 - Sharing prompts with `.github/prompts/` and `copilot-instructions.md`
 
-**Status:** 📅 Scheduled | 13/01/2026
+**Status:** ✅ Completed
+
+---
+
+### Session Three: Beyond Context - OpenCode
+**[View Presentation](./sessionThree/presentation.md)** | **[Session Details](./sessionThree/README.md)**
+
+**Quick Brief:**
+Understanding context window limits and how to manage them effectively. We explore 6 strategies for context management, compare GitHub Copilot's limitations (no nested agents) with OpenCode's capabilities (multi-provider, nested agents, open source), and discuss when to use each tool.
+
+**Key Topics:**
+- Context window limits and the real challenge (your project vs AI memory)
+- 6 strategies: CLAUDE.md, code maps, subagents, dynamic scoping, chunking, session continuity
+- GitHub Copilot in 2026: strengths and remaining limitations
+- OpenCode: nested agents, 75+ providers, open source freedom
+- Practical guidance: when to use Copilot vs OpenCode
+
+**Status:** 📅 Scheduled
 
 ---
 
@@ -127,10 +147,11 @@ This is a collaborative learning space. If you discover useful AI techniques, to
 ## 📌 Resources
 
 **Context-Aware AI Tools:**
+- [GitHub Copilot](https://github.com/features/copilot) - Popular, paid (company license)
+- [OpenCode](https://opencode.ai) - Open-source, multi-provider, nested agents
 - [Claude Code](https://claude.ai/code) - CLI tool, free
 - [Cursor](https://cursor.sh) - AI-first IDE, freemium
 - [Windsurf](https://codeium.com/windsurf) - New AI IDE
-- [GitHub Copilot](https://github.com/features/copilot) - Popular, paid
 
 **Learning Materials:**
 - [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
