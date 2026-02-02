@@ -2,7 +2,29 @@
 
 **Date:** TBD
 **Duration:** 30-40 minutes
-**Format:** Interactive presentation with discussion
+**Format:** Interactive Slidev presentation with discussion
+
+## Viewing the Presentation
+
+This session uses [Slidev](https://sli.dev) for an interactive presentation experience.
+
+**Quick Start:**
+```bash
+cd sessionThree
+npm install  # First time only
+npm run dev  # Opens on http://localhost:3030
+```
+
+**Export to PDF:**
+```bash
+npm run export  # Creates slides-export.pdf
+```
+
+**Files:**
+- `slides.md` - Main Slidev presentation (36 slides)
+- `presentation.md` - Original markdown format (backup/reference)
+- `package.json` - Slidev dependencies
+- `SLIDEV.md` - Slidev usage guide
 
 ## Session Goals
 
@@ -30,23 +52,22 @@ This session builds on Sessions One and Two and aims to:
 
 ### Part 2: GitHub Copilot - Where We Are (5 min)
 
-- What Copilot does well (inline suggestions, subagents since Oct 2025)
-- Remaining limitations:
-  - No nested agents (subagent can't spawn another)
-  - Vendor lock-in (GitHub/Microsoft ecosystem)
+- What Copilot does well (inline suggestions, chat, subagents)
+- What's missing for TF1:
+  - No MCP support (on current GitHub plan)
+  - No nested agents (flat orchestration only)
   - Limited model choice
   - No persistent sessions
-  - No local/offline models
 
 ### Part 3: OpenCode - The Alternative (10 min)
 
 - What is OpenCode? (SST team, 93k+ GitHub stars)
-- Key differentiators:
+- Key differentiators for TF1:
+  - **MCP Support** - Connect to Jira, databases, Slack, custom APIs
   - **Nested agents** - True multi-level orchestration
   - **75+ LLM providers** - Use any model
   - **Open source** - No vendor lock-in
   - **Persistent sessions** - Workspaces survive restarts
-  - **Local models** - 100% offline with Ollama
 - When to use what (complementary, not competitive)
 - Quick start: Installation & setup
 
@@ -75,12 +96,12 @@ This session builds on Sessions One and Two and aims to:
 | Feature | Copilot | OpenCode |
 |---------|---------|----------|
 | Inline completion | ✅ Yes | ❌ No |
+| MCP Support (TF1 plan) | ❌ No | ✅ Yes |
 | Nested agents | ❌ No | ✅ Yes |
 | Model choice | ~5 models | 75+ providers |
 | Open source | ❌ No | ✅ Yes |
-| Local models | ❌ No | ✅ Yes (Ollama) |
 
-**Bottom Line:** Use both. Copilot for inline completion, OpenCode for complex orchestration.
+**Bottom Line:** Use both. Copilot for inline completion, OpenCode for complex orchestration and MCP integrations.
 
 ## Debrief
 
