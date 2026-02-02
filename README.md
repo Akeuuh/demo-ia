@@ -35,13 +35,15 @@ demo-ia/
 │   ├── .github/prompts/     # Reusable prompt templates
 │   └── src/                 # Demo code
 ├── sessionThree/            # Beyond Context - OpenCode
-│   ├── presentation.md      # Slides for the session
-│   └── README.md            # Session goals & debrief
+│   ├── slides.md            # Slidev presentation
+│   ├── presentation.md      # Original markdown (backup)
+│   ├── README.md            # Session goals & debrief
+│   └── package.json         # Slidev dependencies
 └── ...
 ```
 
 **How sessions work:**
-1. Each folder contains a `presentation.md` with slides
+1. Each folder contains slides (markdown or Slidev format)
 2. The session `README.md` describes goals and is updated post-session with learnings
 3. Code examples demonstrate concepts in practice
 
@@ -81,17 +83,19 @@ Learn how to write effective prompts that get better results from AI. We cover t
 ---
 
 ### Session Three: Beyond Context - OpenCode
-**[View Presentation](./sessionThree/presentation.md)** | **[Session Details](./sessionThree/README.md)**
+**[View Presentation](./sessionThree/slides.md)** | **[Session Details](./sessionThree/README.md)**
 
 **Quick Brief:**
-Understanding context window limits and how to manage them effectively. We explore 6 strategies for context management, compare GitHub Copilot's limitations (no nested agents) with OpenCode's capabilities (multi-provider, nested agents, open source), and discuss when to use each tool.
+Understanding context window limits and how to manage them effectively. We explore 6 strategies for context management, compare GitHub Copilot's limitations with OpenCode's capabilities (MCP support, nested agents, multi-provider), and discuss when to use each tool.
 
 **Key Topics:**
 - Context window limits and the real challenge (your project vs AI memory)
 - 6 strategies: CLAUDE.md, code maps, subagents, dynamic scoping, chunking, session continuity
-- GitHub Copilot in 2026: strengths and remaining limitations
-- OpenCode: nested agents, 75+ providers, open source freedom
+- GitHub Copilot in 2026: strengths and what's missing for TF1 (no MCP on current plan)
+- OpenCode: MCP integrations, nested agents, 75+ providers, open source
 - Practical guidance: when to use Copilot vs OpenCode
+
+**Format:** Interactive Slidev presentation (run with `npm run dev` in sessionThree/)
 
 **Status:** 📅 Scheduled
 
@@ -109,14 +113,21 @@ Understanding context window limits and how to manage them effectively. We explo
 
 2. Navigate to the session folder:
    ```bash
-   cd sessionOne
+   cd sessionOne  # or sessionTwo, sessionThree, etc.
    ```
 
 3. View the presentation:
-   ```bash
-   slides presentation.md
-   ```
-   *Requires [slides](https://github.com/maaslalani/slides) to be installed*
+   - **For markdown presentations** (Session One & Two):
+     ```bash
+     slides presentation.md
+     ```
+     *Requires [slides](https://github.com/maaslalani/slides) to be installed*
+   
+   - **For Slidev presentations** (Session Three):
+     ```bash
+     npm install  # First time only
+     npm run dev  # Opens on http://localhost:3030
+     ```
 
 4. Try the demo code:
    ```bash
