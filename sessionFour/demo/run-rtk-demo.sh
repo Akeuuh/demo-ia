@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-# Démo RTK pour la session 4 — autonome, déterministe.
-# Génère ses propres données, compare sortie brute vs RTK, estime les tokens.
-# Usage: bash run-rtk-demo.sh   (dans un terminal normal, pas via l'IA)
+# Démo RTK pour la session 4 — compare sortie brute vs RTK, estime tokens.
+# Usage: bash run-rtk-demo.sh   (dans le dossier demo/)
 
 set -euo pipefail
+cd "$(dirname "$0")"
 
-DATA=$(mktemp -d)
-trap 'rm -rf "$DATA"' EXIT
+LOG="./app.log"
 
 # ~ tokens ≈ caractères / 4 (approximation parlante)
 toks() { echo $(( $1 / 4 )); }
@@ -25,12 +24,6 @@ echo
 # ─────────────────────────────────────────────────────────────────────
 # 1. Log bruité : 200 lignes répétées + 1 vraie erreur
 # ─────────────────────────────────────────────────────────────────────
-LOG="$DATA/app.log"
-for i in $(seq 1 200); do
-  echo "[INFO] retry connection attempt failed, timeout after 30s"
-done > "$LOG"
-echo "[ERROR] disk full at /var/data — write rejected" >> "$LOG"
-
 echo "① LOG BRUITÉ (200 lignes répétées + 1 erreur réelle)"
 line
 row "" "lignes" "chars" "~tokens"
@@ -71,4 +64,4 @@ line
 GAIN=$(rtk gain 2>/dev/null || true)
 printf '%s\n' "$GAIN" | head -9 | sed 's/^/  /'
 echo
-echo "Fin. (données temporaires supprimées)"
+echo "Fin."
