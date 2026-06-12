@@ -867,12 +867,6 @@ Auto-activation : l'installateur configure le hook automatiquement pour Claude C
 
 </div>
 
-<div class="strategy-card mt-4">
-
-**Vérifier / stats :** `/caveman-stats` affiche tokens sauvés, mode actif, réduction estimée.
-
-</div>
-
 ---
 
 # Caveman : slash commands
@@ -999,40 +993,6 @@ Tokens différents → <span class="text-blue-400"><b>lance les deux, les écono
 - **Tu as besoin du brut** → `rtk proxy` pour contourner la compression
 - **Compliance / audit** → sache que RTK enlève des données ; vérifie que rien de critique n'est perdu
 
-</div>
-
----
-
-# Démo live
-
-<div class="mt-6 grid grid-cols-2 gap-6">
-
-<div class="strategy-card">
-
-### 🎬 Démo RTK
-
-1. `rtk gain` — économies actuelles
-2. Une suite de tests brut vs `rtk` — comparer le nombre de lignes
-3. `git push` avant/après
-4. `rtk discover` sur l'historique réel
-
-</div>
-
-<div class="strategy-card">
-
-### 🎬 Démo Caveman
-
-1. Poser une question de debug en mode normal
-2. `/caveman full`, reposer
-3. Comparer les compteurs de tokens côte à côte
-4. Montrer l'auto-clarté sur un prompt « delete table »
-
-</div>
-
-</div>
-
-<div class="mt-6 text-center opacity-80">
-Bonus : les deux ensemble sur une vraie tâche — mesurer la baisse combinée.
 </div>
 
 ---
